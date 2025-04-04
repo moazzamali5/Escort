@@ -4,8 +4,16 @@ const nextConfig = {
   basePath: '/Escort', // Your repository name
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
   assetPrefix: '/Escort/', // Your repository name with trailing slash
+  trailingSlash: true,
+  distDir: 'out',
 };
 
 export default nextConfig; 
